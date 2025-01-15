@@ -4,14 +4,10 @@ import pandas as pd
 from PIL import Image
 # from sklearn.preprocessing import OrdinalEncoder
 
-FILENAME_STATS="C:/Users/Manu/Documents/MCC/Cursos/IT Academy/ML4BIZ/Sprint 8. Entrenamiento, Evaluación y Interpretación del Modelo/ecommerce_stats.csv"
-# STATSFILENAME="ecommerce_stats.csv"
 
-FILENAME_ENCODER="C:/Users/Manu/Documents/MCC/Cursos/IT Academy\ML4BIZ/Sprint 8. Entrenamiento, Evaluación y Interpretación del Modelo/rf_ordinal_encoder.pkl"
-# ENCODERFILENAME="rf_ordinal_encoder.pkl"
-
-FILENAME_MODEL="C:/Users/Manu/Documents/MCC/Cursos/IT Academy\ML4BIZ/Sprint 8. Entrenamiento, Evaluación y Interpretación del Modelo/rf_model.pkl"
-# MODELFILENAME="rf_model.pkl"
+FILENAME_STATS="ecommerce_stats.csv"
+FILENAME_ENCODER="rf_ordinal_encoder.pkl"
+FILENAME_MODEL="rf_model.pkl"
 
 
 def calculate_stats(filename):
