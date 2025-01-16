@@ -203,7 +203,11 @@ poutcome_list = ("unknown", "success", "failure")
 # Capçalera del formulari Web
 st.image(FILENAME_LOGO)
 st.title("Predicción Contratación Depósito Bancario")
-st.header("(_Random Forest_  :deciduous_tree: :deciduous_tree: :deciduous_tree:)")   
+st.header("(_Random Forest_  :deciduous_tree: :deciduous_tree: :deciduous_tree:)") 
+
+# DEBUG
+st.write("Version libreria sckikit-learn", sklearn.__version__)
+# DEBUG
 
 # Entrada de dades del usuari (totes excepte 'age', 'duration', 'previous', 'default' ja es van descartar)
 st.subheader("Bank client data:", divider="gray")
@@ -279,4 +283,4 @@ st.write("Will the client subscribe a term deposit: ", "**YES**" if deposit else
 
 st.subheader("", divider="gray")
 st.subheader("(c) Manu Cañete 2025 [manuel.canete023@gmail.com]")
-st.write("Version libreria sckikit-learn", sklearn.__version__)
+
