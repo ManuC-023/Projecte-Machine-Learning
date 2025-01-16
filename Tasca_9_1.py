@@ -277,9 +277,12 @@ user_data_norm = normalize_df(model_features=model.feature_names_in_, df_product
 
 # Finalment, calcula i presenta la predicció
 st.header("Prediction:", divider='gray')
-deposit=model.predict(user_data_norm)
-# st.write(f"Deposit: {deposit}")
-st.write("Will the client subscribe a term deposit: ", "**YES**" if deposit else "no")
+try:
+    deposit=model.predict(user_data_norm)
+    # st.write(f"Deposit: {deposit}")
+    st.write("Will the client subscribe a term deposit: ", "**YES**" if deposit else "no")
+except Exception as e:
+    st.error(f"Error in prediction: {str(e)}")
 
 st.subheader("", divider="gray")
 st.subheader("(c) Manu Cañete 2025 [manuel.canete023@gmail.com]")
