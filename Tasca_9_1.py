@@ -9,6 +9,9 @@ FILENAME_STATS="ecommerce_stats.csv"
 FILENAME_ENCODER="rf_ordinal_encoder.pkl"
 FILENAME_MODEL="rf_model.pkl"
 FILENAME_LOGO="logo.png"
+FILENAME_YES="yes.png"
+FILENAME_NO="no.png"
+
 
 
 def calculate_stats(filename):
@@ -201,7 +204,7 @@ contact_list = ("unknown", "cellular", "telephone")
 poutcome_list = ("unknown", "success", "failure")
 
 # Capçalera del formulari Web
-st.image(FILENAME_LOGO)
+st.image(image=FILENAME_LOGO, width=200)
 st.title("Predicción Contratación Depósito Bancario")
 st.header("(_Random Forest_  :deciduous_tree: :deciduous_tree: :deciduous_tree:)")   
 
@@ -280,7 +283,9 @@ st.header("Prediction:", divider='gray')
 try:
     deposit=model.predict(user_data_norm)
     # st.write(f"Deposit: {deposit}")
-    st.write("Will the client subscribe a term deposit: ", "**YES**" if deposit else "no")
+    st.write("Will the client subscribe a term deposit?")
+    image_yn=FILENAME_YES if deposit else FILENAME_NO
+    st.image(image=image_yn, width=180)
 except Exception as e:
     st.error(f"Error in prediction: {str(e)}")
 
