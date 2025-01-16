@@ -206,7 +206,8 @@ st.title("Predicción Contratación Depósito Bancario")
 st.header("(_Random Forest_  :deciduous_tree: :deciduous_tree: :deciduous_tree:)") 
 
 # DEBUG
-st.write("Version libreria sckikit-learn", sklearn.__version__)
+import sklearn as sk
+st.write("Version libreria sckikit-learn", sk.__version__)
 # DEBUG
 
 # Entrada de dades del usuari (totes excepte 'age', 'duration', 'previous', 'default' ja es van descartar)
