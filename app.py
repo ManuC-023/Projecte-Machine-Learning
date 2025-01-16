@@ -278,3 +278,4 @@ st.write("Will the client subscribe a term deposit: ", "**YES**" if deposit else
 
 st.subheader("", divider="gray")
 st.subheader("(c) Manu Cañete 2025 [manuel.canete023@gmail.com]")
+st.write("Version libreria sckikit-learn", sklearn.__version__)
