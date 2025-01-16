@@ -269,7 +269,10 @@ user_data_norm = normalize_df(model_features=model.feature_names_in_, df_product
 # print(user_data_norm)
 # st.write(f"Datos normalizados: {user_data_norm.columns}")
 # st.write(f"Datos normalizados: {user_data_norm.iloc[0].values}")
-user_data_norm.to_csv("_user_data_norm.csv", index=False)
+# user_data_norm.to_csv("_user_data_norm.csv", index=False)
+st.write("Shape:", user_data_norm.shape)
+st.write("Types:", user_data_norm.dtypes)
+st.write("Nulls:", user_data_norm.isnull().sum())
 
 # Finalment, calcula i presenta la predicció
 st.header("Prediction:", divider='gray')
