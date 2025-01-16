@@ -8,6 +8,7 @@ from PIL import Image
 FILENAME_STATS="ecommerce_stats.csv"
 FILENAME_ENCODER="rf_ordinal_encoder.pkl"
 FILENAME_MODEL="rf_model.pkl"
+FILENAME_LOGO="logo.png"
 
 
 def calculate_stats(filename):
@@ -19,9 +20,9 @@ def calculate_stats(filename):
         stats: dictionari amb les estadistiques necesaries per aplicar EDA
     '''
     stats = dict(pd.read_csv(filename).iloc[0])
-    print()
-    print("Estadisticas leidas: ", stats)
-    print("Tipo 'stats':", type(stats))
+    # print()
+    # print("Estadisticas leidas: ", stats)
+    # print("Tipo 'stats':", type(stats))
     return stats
 
 
@@ -200,7 +201,7 @@ contact_list = ("unknown", "cellular", "telephone")
 poutcome_list = ("unknown", "success", "failure")
 
 # Capçalera del formulari Web
-st.image("./logo.png")
+st.image(FILENAME_LOGO)
 st.title("Predicción Contratación Depósito Bancario")
 st.header("(_Random Forest_  :deciduous_tree: :deciduous_tree: :deciduous_tree:)")   
 
